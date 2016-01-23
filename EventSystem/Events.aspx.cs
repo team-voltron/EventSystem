@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
-namespace EventSystem
+﻿namespace EventSystem
 {
+    using Models;
+    using System;
+    using System.Collections.Generic;
+
     public partial class Events : System.Web.UI.Page
     {
+        public EventSystemDbContext dbContext;
+
+        public Events()
+        {
+            this.dbContext = new EventSystemDbContext();
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
+        }
 
+        public IEnumerable<Category> RepeatCategories_GetData()
+        {
+            return this.dbContext.Categories;
         }
     }
 }
