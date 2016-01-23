@@ -1,0 +1,11 @@
+version: 1.0.{build}
+os: Visual Studio 2015
+install:
+- set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
+before_build:
+- cmd: nuget restore EventsSystem.sln
+build:
+  project: EventsSystem.sln
+  verbosity: minimal
+cache:
+  - packages -> **\packages.config
