@@ -1,8 +1,12 @@
-﻿namespace EventSystem.Models
+﻿// <copyright file="EventSystemDbContext.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace EventSystem.Models
 {
     using System.Data.Entity;
+    using EventSystem.Migrations;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using Migrations;
 
     // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class EventSystemDbContext : IdentityDbContext<AppUser>
@@ -12,6 +16,12 @@
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<EventSystemDbContext, Configuration>());
         }
+
+        public IDbSet<Event> Events { get; set; }
+
+        public IDbSet<Comment> Comments { get; set; }
+
+        public IDbSet<Category> Categories { get; set; }
 
         public static EventSystemDbContext Create()
         {

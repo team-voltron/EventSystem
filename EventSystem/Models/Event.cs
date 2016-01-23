@@ -44,5 +44,11 @@
             get { return this.users; }
             set { this.users = value; }
         }
+
+        public virtual ICollection<Comment> Comments
+        {
+            get { return this.comments; }
+            set { this.comments = value; }
+        }
     }
 }

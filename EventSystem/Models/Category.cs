@@ -22,10 +22,6 @@
         [MaxLength(ValidationConstants.MaxCategoryNameLenght)]
         public string Name { get; set; }
 
-        public string AuthorId { get; set; }
-
-        public virtual AppUser Author { get; set; }
-
         public virtual ICollection<Event> Events
         {
             get { return this.events; }
