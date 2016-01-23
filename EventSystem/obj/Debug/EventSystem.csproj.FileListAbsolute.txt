@@ -64,3 +64,5 @@ C:\Git\Voltron\EventSystem\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Git\Voltron\EventSystem\obj\Debug\EventSystem.dll
 C:\Git\Voltron\EventSystem\obj\Debug\EventSystem.pdb
 C:\Git\Voltron\EventSystem\obj\Debug\EventSystem.csprojResolveAssemblyReference.cache
+C:\Git\Voltron\EventSystem\bin\EventSystem.Common.dll
+C:\Git\Voltron\EventSystem\bin\EventSystem.Common.pdb

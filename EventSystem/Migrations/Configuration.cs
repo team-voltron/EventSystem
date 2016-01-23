@@ -4,7 +4,7 @@ namespace EventSystem.Migrations
 
     using Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
+    public sealed class Configuration : DbMigrationsConfiguration<EventSystemDbContext>
     {
         public Configuration()
         {
@@ -12,7 +12,7 @@ namespace EventSystem.Migrations
             this.AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(ApplicationDbContext context)
+        protected override void Seed(EventSystemDbContext context)
         {
             // This method will be called after migrating to the latest version.
 

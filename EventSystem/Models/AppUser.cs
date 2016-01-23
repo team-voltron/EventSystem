@@ -5,7 +5,7 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    public class ApplicationUser : IdentityUser
+    public class AppUser : IdentityUser
     {
         public ClaimsIdentity GenerateUserIdentity(ApplicationUserManager manager)
         {
