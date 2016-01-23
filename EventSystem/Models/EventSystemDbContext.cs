@@ -1,18 +1,21 @@
 ﻿namespace EventSystem.Models
 {
+    using System.Data.Entity;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using Migrations;
 
     // You can add User data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class EventSystemDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public EventSystemDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EventSystemDbContext, Configuration>());
         }
 
-        public static ApplicationDbContext Create()
+        public static EventSystemDbContext Create()
         {
-            return new ApplicationDbContext();
+            return new EventSystemDbContext();
         }
     }
 }
