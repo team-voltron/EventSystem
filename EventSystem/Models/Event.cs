@@ -9,16 +9,15 @@
 
     public class Event
     {
-        private ICollection<User> users;
+        private ICollection<AppUser> users;
         private ICollection<Comment> comments;
 
         public Event()
         {
-            this.users = new HashSet<User>();
+            this.users = new HashSet<AppUser>();
             this.comments = new HashSet<Comment>();
         }
 
-        [Key]
         public int Id { get; set; }
 
         [Required]
@@ -29,17 +28,16 @@
         [MaxLength(ValidationConstants.MaxEventDescription)]
         public string Description { get; set; }
 
-        public DateTime Date { get; set; }
+        [Required]
+        public DateTime DateCreated { get; set; }
 
         public string AuthorId { get; set; }
 
         public virtual AppUser Author { get; set; }
 
-        public int? CategoryId { get; set; }
-
         public virtual Category Category { get; set; }
 
-        public virtual ICollection<User> Users
+        public virtual ICollection<AppUser> Users
         {
             get { return this.users; }
             set { this.users = value; }

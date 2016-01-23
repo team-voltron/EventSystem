@@ -5,6 +5,7 @@
 namespace EventSystem.Models
 {
     using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
     using EventSystem.Migrations;
     using Microsoft.AspNet.Identity.EntityFramework;
 

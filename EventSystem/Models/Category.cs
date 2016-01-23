@@ -2,30 +2,26 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     using Common;
 
     public class Category
     {
-        private ICollection<Event> events;
-
         public Category()
         {
-            this.events = new HashSet<Event>();
+            this.Events = new HashSet<Event>();
         }
 
         [Key]
         public int Id { get; set; }
 
         [Required]
+        [Index(IsUnique = true)]
         [MinLength(ValidationConstants.MinCategoryNameLenght)]
         [MaxLength(ValidationConstants.MaxCategoryNameLenght)]
         public string Name { get; set; }
 
-        public virtual ICollection<Event> Events
-        {
-            get { return this.events; }
-            set { this.events = value; }
-        }
+        public virtual ICollection<Event> Events { get; set; }
     }
 }
