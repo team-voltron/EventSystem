@@ -61,6 +61,5 @@ C:\Git\Voltron\EventSystem\bin\Microsoft.Owin.Security.Google.xml
 C:\Git\Voltron\EventSystem\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Git\Voltron\EventSystem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Git\Voltron\EventSystem\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Git\Voltron\EventSystem\obj\Debug\EventSystem.csprojResolveAssemblyReference.cache
 C:\Git\Voltron\EventSystem\obj\Debug\EventSystem.dll
 C:\Git\Voltron\EventSystem\obj\Debug\EventSystem.pdb
