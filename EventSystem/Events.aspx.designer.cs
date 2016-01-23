@@ -11,7 +11,7 @@ namespace EventSystem
 {
 
 
-    public partial class About
+    public partial class Events
     {
     }
 }
