@@ -54,7 +54,7 @@
                         <asp:LoginView runat="server" ID="LoginViewMenu">
                             <LoggedInTemplate>
                                 <li><a runat="server" href="~/Admin/EditCategories">Categories</a></li>
-                                <li><a runat="server" href="/Admin/EditBooks">Books</a></li>
+                                <li><a runat="server" href="~/Admin/EditEvents">Events</a></li>
                             </LoggedInTemplate>
                         </asp:LoginView>
                     </ul>
