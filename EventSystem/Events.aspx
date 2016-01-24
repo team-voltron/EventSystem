@@ -1,8 +1,19 @@
 ﻿<%@ Page Title="Events" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Events.aspx.cs" Inherits="EventSystem.Events" %>
 
 <asp:Content ID="ContentBody" ContentPlaceHolderID="MainContent" runat="server">
-    <h1><%: this.Title %></h1>
 
+    <div class="row">
+        <h1 class="col-md-6"><%: this.Title %></h1>
+        <div class="col-md-6">
+            <div class="input-append">
+                <asp:TextBox runat="server" ID="TextBoxSearchParam" CssClass="col-md-6" type="text" placeholder="Seach by event name" />
+                <asp:LinkButton runat="server" ID="LinkButtonSeach" OnClick="LinkButtonSeach_Click" CssClass="btn btn-info" Text="Search" />
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    
     <asp:ListView runat="server" ID="ListViewCategories" ItemType="EventSystem.Models.Category" SelectMethod="ListViewCategories_GetData"
         GroupItemCount="3">
         <GroupTemplate>

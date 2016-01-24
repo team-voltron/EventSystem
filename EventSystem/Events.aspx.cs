@@ -29,5 +29,11 @@
         {
             return this.dbContext.Categories;
         }
+
+        protected void LinkButtonSeach_Click(object sender, EventArgs e)
+        {
+            string queryParam = string.Format("?q={0}", this.TextBoxSearchParam.Text);
+            Response.Redirect("~/Search" + queryParam);
+        }
     }
 }
