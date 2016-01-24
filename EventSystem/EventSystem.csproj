@@ -173,8 +173,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="EventDetails.aspx" />
-    <Content Include="Events.aspx" />
+    <Content Include="Events\All.aspx" />
+    <Content Include="Events\Create.aspx" />
+    <Content Include="Events\Details.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -346,19 +347,26 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="EventDetails.aspx.cs">
-      <DependentUpon>EventDetails.aspx</DependentUpon>
+    <Compile Include="Events\All.aspx.cs">
+      <DependentUpon>All.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EventDetails.aspx.designer.cs">
-      <DependentUpon>EventDetails.aspx</DependentUpon>
+    <Compile Include="Events\All.aspx.designer.cs">
+      <DependentUpon>All.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Events.aspx.cs">
-      <DependentUpon>Events.aspx</DependentUpon>
+    <Compile Include="Events\Create.aspx.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Events.aspx.designer.cs">
-      <DependentUpon>Events.aspx</DependentUpon>
+    <Compile Include="Events\Create.aspx.designer.cs">
+      <DependentUpon>Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
