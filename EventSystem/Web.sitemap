@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Home" title="Home"  description="Home page">
+    <siteMapNode url="~/Events/All" title="Events" description="Events">
+      <siteMapNode url="~/Events/Details" title="Event Details" description="Event details page" />
+      <siteMapNode url="~/Events/Create" title="Create Events" description="Create event page" />
+    </siteMapNode>
+    <siteMapNode url="~/Categories" title="Categories"  description="Categories page" />
+    <siteMapNode title="Admin panel" description="Admin panel">
+      <siteMapNode url="~/Admin/EditCategories" title="Edit Categories" description="Edit categories panel" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
