@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Events" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Events.aspx.cs" Inherits="EventSystem.Events" %>
+﻿<%@ Page Title="Events" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="All.aspx.cs" Inherits="EventSystem.Events.All" %>
 
 <asp:Content ID="ContentBody" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -39,7 +39,7 @@
 
                             <ItemTemplate>
                                 <li class="list-group-item">
-                                    <asp:HyperLink NavigateUrl='<%# string.Format("~/EventDetails.aspx?id={0}", Item.Id) %>' runat="server" Text='<%# string.Format(@"{0}</br>", Item.Name) %>' />
+                                    <asp:HyperLink NavigateUrl='<%# string.Format("~/Events/Details.aspx?id={0}", Item.Id) %>' runat="server" Text='<%# string.Format(@"{0}</br>", Item.Name) %>' />
                                     <p>
                                         <span>Created by: <%#: Item.Author.UserName %></span>
                                         <span class="badge">Date: <%#: Item.DateCreated %></span>

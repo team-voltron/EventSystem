@@ -1,4 +1,4 @@
-﻿namespace EventSystem
+﻿namespace EventSystem.Events
 {
     using System;
     using System.Collections.Generic;
@@ -6,11 +6,11 @@
 
     using Models;
 
-    public partial class Events : System.Web.UI.Page
+    public partial class All : System.Web.UI.Page
     {
         public EventSystemDbContext dbContext;
 
-        public Events()
+        public All()
         {
             this.dbContext = new EventSystemDbContext();
         }

@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventSystem {
+namespace EventSystem.Events {
     
     
-    public partial class EventDetails {
+    public partial class Details {
         
         /// <summary>
         /// FormVideEventDetails control.
