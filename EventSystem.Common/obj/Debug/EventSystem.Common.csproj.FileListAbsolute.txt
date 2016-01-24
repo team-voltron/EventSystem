@@ -1,5 +1,0 @@
-C:\Git\Voltron\EventSystem.Common\bin\Debug\EventSystem.Common.dll
-C:\Git\Voltron\EventSystem.Common\bin\Debug\EventSystem.Common.pdb
-C:\Git\Voltron\EventSystem.Common\obj\Debug\EventSystem.Common.csprojResolveAssemblyReference.cache
-C:\Git\Voltron\EventSystem.Common\obj\Debug\EventSystem.Common.dll
-C:\Git\Voltron\EventSystem.Common\obj\Debug\EventSystem.Common.pdb
