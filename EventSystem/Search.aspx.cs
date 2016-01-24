@@ -13,6 +13,7 @@
 
         public Search()
         {
+
             this.dbContext = new EventSystemDbContext();
         }
 

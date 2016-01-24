@@ -13,12 +13,13 @@ namespace EventSystem.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
-            var user = new AppUser() { UserName = Email.Text, Email = Email.Text };
-            IdentityResult result = manager.Create(user, Password.Text);
+            var manager = this.Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var signInManager = this.Context.GetOwinContext().Get<ApplicationSignInManager>();
+            var user = new AppUser() { UserName = this.UserName.Text, Email = this.Email.Text };
+            IdentityResult result = manager.Create(user, this.Password.Text);
             if (result.Succeeded)
             {
+                manager.AddToRole(user.Id, "user");
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 //string code = manager.GenerateEmailConfirmationToken(user.Id);
                 //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
@@ -27,7 +28,7 @@ namespace EventSystem.Account
                 signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }
-            else 
+            else
             {
                 ErrorMessage.Text = result.Errors.FirstOrDefault();
             }
