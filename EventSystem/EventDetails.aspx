@@ -6,7 +6,7 @@
             <header>
                 <h1><%: Title %></h1>
                 <p><%#: Item.Name %></p>
-                <p><i>by <%#: Item.Author %></i></p>
+                <p><i>by <%#: Item.Author.UserName %></i></p>
                 <p><%#: Item.Description %>
                 </p>
             </header>
