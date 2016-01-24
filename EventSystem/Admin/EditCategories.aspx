@@ -91,7 +91,7 @@
                     <asp:TextBox runat="server" ID="TextBoxName" Text="<%#: BindItem.Name %>" />
                 </td>
                 <td>
-                    <asp:LinkButton CssClass="btn btn-warning" runat="server" ID="ButtonEdit" CommandName="Insert" Text="Insert" />
+                    <asp:LinkButton CssClass="btn btn-warning" runat="server" ID="ButtonEdit" CommandName="Insert" Text="Insert" OnClientClick />
                     <asp:LinkButton CssClass="btn btn-danger" runat="server" ID="ButtonDelete" CommandName="Cancel" Text="Cancel" />
                 </td>
             </tr>
