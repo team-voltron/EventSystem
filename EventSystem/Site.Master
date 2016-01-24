@@ -82,6 +82,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
+                <asp:SiteMapPath runat="server"></asp:SiteMapPath>
                 <p>&copy; <%: DateTime.Now.Year %> - Our ASP.NET Application</p>
             </footer>
         </div>
