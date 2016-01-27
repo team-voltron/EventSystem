@@ -15,8 +15,8 @@
         <div class="row">
             <div class="col-md-4 text-center">
                 <h4>
-                    <strong>Total users: </strong>
-                    <asp:Label runat="server" ID="LabelUsersTotal" CssClass="badge" />
+                    <strong>Total categories: </strong>
+                    <asp:Label runat="server" ID="LabelCategoriesTotal" CssClass="badge" />
                 </h4>
             </div>
             <div class="col-md-4 text-center">
@@ -42,15 +42,15 @@
                 </h3>
             </div>
             <asp:ListView runat="server"
-                ItemType="EventSystem.Models.AppUser"
+                ItemType="EventSystem.Models.Category"
                 ID="UsersLiveView" SelectMethod="UsersLiveView_GetData">
                 <LayoutTemplate>
                     <table class="table table-responsive">
                         <thead>
                             <tr>
-                                <th>Username
+                                <th>Categories
                                 </th>
-                                <th class="text-right">E-mail
+                                <th class="text-right">Events in category
                                 </th>
                             </tr>
                         </thead>
@@ -62,11 +62,14 @@
                         <td>
                             <asp:Label
                                 runat="server" ID="EventCount"
-                                Text="<%# Item.UserName%>" />
+                                Text="<%# Item.Name%>" />
                             <%--<asp:HyperLink NavigateUrl='<%# string.Format("~/{0}", Item.UserName) %>' runat="server" Text='<%# Item.UserName %>' />--%>
                         </td>
                         <td class="text-right">
-                            <asp:HyperLink NavigateUrl='<%# string.Format("mailto:{0}", Item.Email) %>' runat="server" Text='<%# Item.Email %>' />
+                            <asp:Label
+                                CssClass="badge"
+                                runat="server" ID="LabelCategoryEventsCount"
+                                Text="<%# Item.Events.Count%>" />
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -92,9 +95,14 @@
                     <table class="table table-responsive">
                         <thead>
                             <tr>
-                                <th>Event name
+                                <th>
+                                    Name
                                 </th>
-                                <th class="text-right">Comments
+                                <th class="text-center">
+                                    Starts
+                                </th>
+                                <th class="text-right">
+                                    Comments
                                 </th>
                             </tr>
                         </thead>
@@ -111,8 +119,13 @@
                         </td>
                         <td class="text-right">
                             <asp:Label
+                                CssClass="badge text-center"
+                                runat="server" ID="Label1"
+                                Text="<%# Item.DateTimeStarts %>" />
+                        <td class="text-right">
+                            <asp:Label
                                 CssClass="badge"
-                                runat="server" ID="EventCount"
+                                runat="server" ID="EventCommentsCount"
                                 Text="<%# Item.Comments.Count %>" />
                         </td>
                     </tr>

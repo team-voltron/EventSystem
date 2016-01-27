@@ -14,14 +14,23 @@
             this.dbContext = new EventSystemDbContext();
         }
 
-        public IQueryable<AppUser> UsersLiveView_GetData()
+        public IQueryable<Category> UsersLiveView_GetData()
         {
-            return this.dbContext.Users.OrderBy(u => u.UserName).Skip(0).Take(5);
+            return this.dbContext
+                .Categories
+                .OrderByDescending(u => u.Events.Count)
+                .Skip(0)
+                .Take(5);
         }
 
         public IQueryable<Event> EventsListView_GetData()
         {
-            return this.dbContext.Events.OrderBy(e => e.Comments.Count).Skip(0).Take(5);
+            return this.dbContext
+                .Events
+                .OrderBy(e => e.DateTimeStarts)
+                .ThenByDescending(e => e.Comments.Count)
+                .Skip(0)
+                .Take(5);
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -36,12 +45,12 @@
                 this.Cache["eventsTotal"] = this.dbContext.Events.Count();
             }
 
-            if (this.Cache["usersTotal"] == null)
+            if (this.Cache["categoriesTotal"] == null)
             {
-                this.Cache["usersTotal"] = this.dbContext.Users.Count();
+                this.Cache["categoriesTotal"] = this.dbContext.Categories.Count();
             }
 
-            this.LabelUsersTotal.Text = this.Cache["usersTotal"].ToString();
+            this.LabelCategoriesTotal.Text = this.Cache["categoriesTotal"].ToString();
             this.LabelEventsTotal.Text = this.Cache["eventsTotal"].ToString();
             this.LabelTime.Text = this.Cache["time"].ToString();
         }
