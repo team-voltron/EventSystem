@@ -7,36 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventSystem {
+namespace EventSystem.Controls {
     
     
-    public partial class ControlsTestingPage {
+    public partial class LikeControl {
         
         /// <summary>
-        /// Spinner control.
+        /// ControlWrapper control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl Spinner;
+        protected global::System.Web.UI.UpdatePanel ControlWrapper;
         
         /// <summary>
-        /// Sanitizer control.
+        /// ButtonLike control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EventSystem.Controls.MindYourLanguage Sanitizer;
+        protected global::System.Web.UI.WebControls.LinkButton ButtonLike;
         
         /// <summary>
-        /// LikeButton control.
+        /// LabelValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::EventSystem.Controls.LikeButton LikeButton;
+        protected global::System.Web.UI.WebControls.Label LabelValue;
+        
+        /// <summary>
+        /// ButtonDislike control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton ButtonDislike;
     }
 }
