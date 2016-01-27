@@ -1,40 +1,23 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="EventSystem.Home" %>
 
-<%--cache duration in seconds--%>
-<%--<%@ OutputCache Duration="20" VaryByParam="None" %>--%>
+<%@ Register
+    TagPrefix="uc"
+    TagName="StatsControl"
+    Src="~/Controls/StatsControl.ascx" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<div class="jumbotron">
+    <div class="row">
+        <h1 class="text-center">Welcome to our </h1>
+        <h3 class="text-center">super mega yaka Event system(a) manager</h3>
+        <h6 class="text-center"><em>Note: The statistics are chached for <%= EventSystem.Common.CommonConstants.TimeForChaching/60 %> minutes</em></h6>
 
-    <div class="jumbotron">
-        <div class="row">
-            <h1 class="text-center">Welcome to our </h1>
-            <h3 class="text-center">super mega yaka Event system(a) manager</h3>
-            <hr />
-        </div>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <h4>
-                    <strong>Total categories: </strong>
-                    <asp:Label runat="server" ID="LabelCategoriesTotal" CssClass="badge" />
-                </h4>
-            </div>
-            <div class="col-md-4 text-center">
-                <h4>
-                    <strong>Last update at: </strong>
-                    <br />
-                    <asp:Label runat="server" ID="LabelTime" CssClass="badge" />
-                </h4>
-            </div>
-            <div class="col-md-4 text-center">
-                <h4>
-                    <strong>Total events: </strong>
-                    <asp:Label runat="server" ID="LabelEventsTotal" CssClass="badge" />
-                </h4>
-            </div>
-        </div>
+        <hr />
+
+        <uc:StatsControl runat="server"/>
     </div>
-
+    </div>
     <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">

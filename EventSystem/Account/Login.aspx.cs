@@ -10,6 +10,11 @@ namespace EventSystem.Account
 {
     public partial class Login : Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";
@@ -34,6 +39,8 @@ namespace EventSystem.Account
                 // This doen't count login failures towards account lockout
                 // To enable password failures to trigger lockout, change to shouldLockout: true
                 var result = signinManager.PasswordSignIn(UserName.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
+
+
 
                 switch (result)
                 {

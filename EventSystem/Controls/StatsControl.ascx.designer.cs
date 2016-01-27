@@ -7,27 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EventSystem {
+namespace EventSystem.Controls {
     
     
-    public partial class Home {
+    public partial class StatsControl {
         
         /// <summary>
-        /// UsersLiveView control.
+        /// LabelCategoriesTotal control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView UsersLiveView;
+        protected global::System.Web.UI.WebControls.Label LabelCategoriesTotal;
         
         /// <summary>
-        /// EventsListView control.
+        /// LabelTime control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView EventsListView;
+        protected global::System.Web.UI.WebControls.Label LabelTime;
+        
+        /// <summary>
+        /// LabelEventsTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelEventsTotal;
     }
 }

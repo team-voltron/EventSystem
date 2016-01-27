@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
@@ -171,6 +171,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\EditCategories.aspx" />
     <Content Include="Admin\EditEvents.aspx" />
+    <Content Include="Admin\EditUsers.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -179,6 +180,7 @@
     <Content Include="Controls\LikeControl.ascx" />
     <Content Include="Controls\MindYourLanguage.ascx" />
     <Content Include="Controls\Spinner.ascx" />
+    <Content Include="Controls\StatsControl.ascx" />
     <Content Include="Events\All.aspx" />
     <Content Include="Events\Create.aspx" />
     <Content Include="Events\Details.aspx" />
@@ -368,6 +370,13 @@
     <Compile Include="Admin\EditEvents.aspx.designer.cs">
       <DependentUpon>EditEvents.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\EditUsers.aspx.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUsers.aspx.designer.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -405,6 +414,13 @@
     </Compile>
     <Compile Include="Controls\Spinner.ascx.designer.cs">
       <DependentUpon>Spinner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatsControl.ascx.cs">
+      <DependentUpon>StatsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StatsControl.ascx.designer.cs">
+      <DependentUpon>StatsControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="Events\All.aspx.cs">
       <DependentUpon>All.aspx</DependentUpon>

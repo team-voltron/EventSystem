@@ -33,27 +33,10 @@
                 .Take(5);
         }
 
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (this.Cache["time"] == null)
-            //{
-            //    this.Cache["time"] = DateTime.Now.ToString();
-            //}
-
-            //if (this.Cache["eventsTotal"] == null)
-            //{
-            //    this.Cache["eventsTotal"] = this.dbContext.Events.Count();
-            //}
-
-            //if (this.Cache["categoriesTotal"] == null)
-            //{
-            //    this.Cache["categoriesTotal"] = this.dbContext.Categories.Count();
-            //}
-
-            //this.LabelCategoriesTotal.Text = this.Cache["categoriesTotal"].ToString();
-            //this.LabelEventsTotal.Text = this.Cache["eventsTotal"].ToString();
-            //this.LabelTime.Text = this.Cache["time"].ToString();
+            
         }
     }
 }
