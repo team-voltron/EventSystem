@@ -8,13 +8,16 @@
     Src="~\Controls\MindYourLanguage.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <uc:Spinner id="Spinner1" 
+    <uc:Spinner 
+        ID="Spinner" 
         runat="server" 
         MinValue="1" 
         MaxValue="10" />
 
-    <uc:Sanitizer id="Sanitizer" 
+    <uc:Sanitizer 
+        ID="Sanitizer" 
         runat="server"
+        CssClass="F"
          />
 
 </asp:Content>

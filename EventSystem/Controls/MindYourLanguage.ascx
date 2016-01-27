@@ -3,7 +3,7 @@
 <script runat="server">
     protected void Sanitize_Click(Object sender, EventArgs e)
     {
-        var wordsToSanitize = new[] { "fuck", "shit", "idiot", "dickhead" };
+        var wordsToSanitize = new[] { "fuck", "shit", "idiot", "dickhead", "bitch" };
         var text = this.textToSinitize.Text;
         foreach (var word in wordsToSanitize)
         {
@@ -14,14 +14,27 @@
     }
 </script>
 
-<div class="row">
-    <asp:TextBox 
-        ID="textToSinitize" 
-        TextMode="MultiLine"
-        runat="server"/>
-    <asp:Button 
-        ID="textSend" 
-        runat="server"
-        Text="Submit" 
-        OnClick="Sanitize_Click" />
+<div class="container">
+    <div class="form-group col-md-9">
+        <div class="col-md-3">
+            <label for="textToSinitize">
+                <h3>Your text here:</h3>
+            </label>
+        </div>
+        <div class="col-md-9">
+            <asp:TextBox
+                CssClass="form-control"
+                ID="textToSinitize"
+                TextMode="MultiLine"
+                runat="server" />
+        </div>
+    </div>
+    <div class="col-md-3">
+        <asp:Button
+            CssClass="btn btn-lg btn-success"
+            ID="textSend"
+            runat="server"
+            Text="Submit"
+            OnClick="Sanitize_Click" />
+    </div>
 </div>

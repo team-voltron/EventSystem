@@ -13,13 +13,13 @@ namespace EventSystem {
     public partial class ControlsTestingPage {
         
         /// <summary>
-        /// Spinner1 control.
+        /// Spinner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UserControl Spinner1;
+        protected global::System.Web.UI.UserControl Spinner;
         
         /// <summary>
         /// Sanitizer control.
