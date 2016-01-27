@@ -1,4 +1,8 @@
-﻿/* Move down content because we have a fixed navbar that is 50px tall */
+﻿@font-face {
+    font-family:Impregnable ;
+    src: url(../fonts/Impregnable_Personal_Use_Only.ttf);
+}
+/* Move down content because we have a fixed navbar that is 50px tall */
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -10,6 +14,41 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.navbar-brand{
+    font-family: Impregnable !important;
+    font-size: 50px;
+
+}
+
+.navbar-brand .logo-white{
+    color:white;
+}
+
+.navbar-brand .logo-black{
+    color:black;
+}
+
+.navbar-brand:hover .logo-black{
+    color:white !important;
+}
+
+.navbar-brand:hover .logo-white{
+    color:black !important;
+}
+
+.navbar-default {
+    background-color: #375A7F;
+}
+
+.navbar-default a{
+    color: white !important;
+}
+
+.navbar-default a:hover{
+    color: #1F8D80 !important;
+}
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
