@@ -92,7 +92,7 @@
                             </h3>
                         </EmptyItemTemplate>
                         <InsertItemTemplate>
-                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" OnClick="JoinEventBtn_Click" ID="JoinEventBtn" />
+                            <asp:LinkButton runat="server" Text="Join event" CssClass="btn btn-success btn-block" OnClick="JoinEventBtn_Click" ID="JoinEventBtn" />
                         </InsertItemTemplate>
                     </asp:ListView>
                 </div>
