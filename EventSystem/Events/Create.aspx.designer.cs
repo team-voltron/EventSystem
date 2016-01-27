@@ -76,6 +76,15 @@ namespace EventSystem.Events {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredCategory;
         
         /// <summary>
+        /// EventImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload EventImage;
+        
+        /// <summary>
         /// btnCreateEvent control.
         /// </summary>
         /// <remarks>

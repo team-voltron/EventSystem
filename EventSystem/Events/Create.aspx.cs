@@ -1,7 +1,9 @@
-﻿using EventSystem.Models;
+﻿using EventSystem.Common;
+using EventSystem.Models;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -33,7 +35,7 @@ namespace EventSystem.Events
                 var err = new CustomValidator();
                 err.IsValid = false;
                 err.ErrorMessage = "You are not logged in!";
-                Page.Validators.Add(err);
+                this.Page.Validators.Add(err);
             }
 
             var newEvent = new Event()
@@ -45,8 +47,34 @@ namespace EventSystem.Events
                 CategoryId = int.Parse(this.DropDownCategories.SelectedValue)
             };
 
+            if (this.EventImage.HasFile)
+            {
+                string filename = Path.GetFileName(this.EventImage.FileName);
+                var extension = filename.Substring(filename.LastIndexOf('.') + 1);
+                if (!ValidationConstants.AllowedExtensions.Contains(extension))
+                {
+                    var err = new CustomValidator();
+                    err.IsValid = false;
+                    err.ErrorMessage = "Please upload image with allowed extension (png/jpg/gif/bmp)!";
+                    this.Page.Validators.Add(err);
+                    return;
+                }
+
+                var imagesPath = this.Server.MapPath("~/Public/EventImages/");
+
+                if (!Directory.Exists(imagesPath))
+                {
+                    Directory.CreateDirectory(imagesPath);
+                }
+
+                this.EventImage.SaveAs(imagesPath + filename);
+                newEvent.ImageLocation = "/Public/EventImages/" + filename;
+            }
+
             this.db.Events.Add(newEvent);
             this.db.SaveChanges();
+
+            this.Response.Redirect("~/Home");
         }
     }
 }

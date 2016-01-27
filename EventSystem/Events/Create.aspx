@@ -43,6 +43,8 @@
                     ErrorMessage="Category is not selected!">
                 </asp:RequiredFieldValidator>
                 <br />
+                <asp:FileUpload ID="EventImage" runat="server"  />
+                <br />
                 <asp:Button runat="server"
                     ID="btnCreateEvent"
                     Text="Create event"

@@ -14,9 +14,6 @@
                         <h1><%: Title %></h1>
                         <h2><%#: Item.Name %></h2>
                         <p><i>by <%#: Item.Author.UserName %></i></p>
-                        <p>
-                            <%#: Item.Description %>
-                        </p>
                     </header>
                     <div class="row-fluid">
                         <div class="span12 book-description">
