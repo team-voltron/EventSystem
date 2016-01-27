@@ -75,6 +75,7 @@ namespace EventSystem.Migrations
                 var seedData = new SeedData(user);
                 context.Events.AddOrUpdate(seedData.Events.ToArray());
                 context.Categories.AddOrUpdate(seedData.Categories.ToArray());
+                context.Comments.AddOrUpdate(seedData.Comments.ToArray());
                 context.SaveChanges();
             }
         }
