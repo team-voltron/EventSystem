@@ -175,6 +175,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="ControlsTestingPage.aspx" />
+    <Content Include="Controls\LikeButton.ascx" />
+    <Content Include="Controls\MindYourLanguage.ascx" />
+    <Content Include="Controls\Spinner.ascx" />
     <Content Include="Events\All.aspx" />
     <Content Include="Events\Create.aspx" />
     <Content Include="Events\Details.aspx" />
@@ -364,6 +368,34 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ControlsTestingPage.aspx.cs">
+      <DependentUpon>ControlsTestingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlsTestingPage.aspx.designer.cs">
+      <DependentUpon>ControlsTestingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LikeButton.ascx.cs">
+      <DependentUpon>LikeButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\LikeButton.ascx.designer.cs">
+      <DependentUpon>LikeButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MindYourLanguage.ascx.cs">
+      <DependentUpon>MindYourLanguage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MindYourLanguage.ascx.designer.cs">
+      <DependentUpon>MindYourLanguage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Spinner.ascx.cs">
+      <DependentUpon>Spinner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Spinner.ascx.designer.cs">
+      <DependentUpon>Spinner.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Events\All.aspx.cs">
       <DependentUpon>All.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -479,7 +511,6 @@
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
