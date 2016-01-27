@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Web.Providers.Entities;
+    using System.IO;
 
     using Common;
 
@@ -16,6 +16,7 @@
         {
             this.users = new HashSet<AppUser>();
             this.comments = new HashSet<Comment>();
+            this.ImageLocation = Path.Combine("~/", "Public", "Default", "Event", "1453918504_free-20.png");
         }
 
         public int Id { get; set; }
@@ -32,6 +33,8 @@
         public DateTime DateCreated { get; set; }
 
         public DateTime? DateTimeStarts { get; set; }
+
+        public string ImageLocation { get; set; }
 
         public string AuthorId { get; set; }
 
