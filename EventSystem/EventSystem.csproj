@@ -180,6 +180,7 @@
     <Content Include="Controls\LikeControl.ascx" />
     <Content Include="Controls\MindYourLanguage.ascx" />
     <Content Include="Controls\Spinner.ascx" />
+    <Content Include="Errors\404.aspx" />
     <Content Include="Events\All.aspx" />
     <Content Include="Events\Create.aspx" />
     <Content Include="Events\Details.aspx" />
@@ -413,6 +414,13 @@
     </Compile>
     <Compile Include="Controls\Spinner.ascx.designer.cs">
       <DependentUpon>Spinner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
     </Compile>
     <Compile Include="Events\All.aspx.cs">
       <DependentUpon>All.aspx</DependentUpon>
