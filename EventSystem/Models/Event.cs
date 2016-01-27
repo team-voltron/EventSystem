@@ -31,6 +31,8 @@
         [Required]
         public DateTime DateCreated { get; set; }
 
+        public DateTime? DateTimeStarts { get; set; }
+
         public string AuthorId { get; set; }
 
         public virtual AppUser Author { get; set; }
