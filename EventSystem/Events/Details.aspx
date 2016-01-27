@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="EventSystem.Events.Details" %>
 
+<%@ Register
+    TagPrefix="uc"
+    TagName="LikeControl"
+    Src="~/Controls/LikeControl.ascx" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:FormView runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
         <ItemTemplate>
@@ -22,6 +27,15 @@
                 <div class="col-md-4">
                     <div class="col-md-10 col-md-offset-1">
                         <img src="<%# Item.ImageLocation %>" width="100%" />
+                    </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <uc:likecontrol
+                            runat="server"
+                            id="LikeControl"
+                            value="<%# GetLikes(Item) %>"
+                            currentuservote="<%# GetCurrentUserVote(Item) %>"
+                            dataid="<%# Item.Id %>"
+                            onlike="LikeControl_Like" />
                     </div>
                 </div>
             </div>
@@ -73,8 +87,7 @@
                             </div>
                         </ItemTemplate>
                         <EmptyDataTemplate>
-                            <h3>
-                                There are no participants for this event.
+                            <h3>There are no participants for this event.
                             </h3>
                         </EmptyDataTemplate>
                         <EmptyItemTemplate>
@@ -82,7 +95,7 @@
                             </h3>
                         </EmptyItemTemplate>
                         <InsertItemTemplate>
-                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" OnClick="JoinEventBtn_Click" ID="JoinEventBtn"/>
+                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" OnClick="JoinEventBtn_Click" ID="JoinEventBtn" />
                         </InsertItemTemplate>
                     </asp:ListView>
                 </div>

@@ -1,5 +1,6 @@
 ﻿namespace EventSystem.Events
 {
+    using Controls;
     using EventSystem.Models;
     using Microsoft.AspNet.Identity;
     using System;
@@ -91,6 +92,51 @@
             currentEvent.Users.Add(user);
             this.dbContext.SaveChanges();
             this.DataBind();
+        }
+
+        protected int GetLikes(Event item)
+        {
+            if (item.Likes.Count > 0)
+            {
+                return item.Likes.Sum(l => l.Value);
+            }
+
+            return 0;
+        }
+
+        protected int GetCurrentUserVote(Event item)
+        {
+            string userID = this.User.Identity.GetUserId();
+            Like like = item.Likes.FirstOrDefault(l => l.UserID == userID);
+            if (like == null)
+            {
+                return 0;
+            }
+
+            return like.Value;
+        }
+
+        protected void LikeControl_Like(object sender, LikeEventArgs e)
+        {
+            string userID = this.User.Identity.GetUserId();
+            Event article = this.dbContext.Events.Find(e.DataID);
+            Like like = article.Likes.FirstOrDefault(l => l.UserID == userID);
+            if (like == null)
+            {
+                like = new Like()
+                {
+                    UserID = userID,
+                };
+
+                this.dbContext.Events.Find(e.DataID).Likes.Add(like);
+            }
+
+            like.Value = e.LikeValue;
+            this.dbContext.SaveChanges();
+
+            var control = sender as LikeControl;
+            control.Value = article.Likes.Sum(l => l.Value);
+            control.CurrentUserVote = e.LikeValue;
         }
     }
 }
