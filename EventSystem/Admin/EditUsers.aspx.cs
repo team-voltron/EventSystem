@@ -16,9 +16,13 @@ namespace EventSystem.Admin
     {
         private EventSystemDbContext dbContext;
 
-        protected void Page_Load(object sender, EventArgs e)
+        public EditUsers()
         {
             this.dbContext = new EventSystemDbContext();
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
             if (!IsPostBack)
             {
                 BindGridviewData();
@@ -30,15 +34,11 @@ namespace EventSystem.Admin
             DataTable dTable = new DataTable();
             dTable.Columns.Add("Username", typeof(string));
             dTable.Columns.Add("Is Admin", typeof(bool));
-
             var roles = this.dbContext.Roles;
+            var users = this.dbContext.Users.Where(u => u.UserName != User.Identity.Name && u.UserName != "admin");
 
-            foreach (AppUser u in this.dbContext.Users)
+            foreach (AppUser u in users)
             {
-                if (u.UserName == "admin")
-                {
-                    continue;
-                }
 
                 DataRow dRow = dTable.NewRow();
                 var roleAdmin = roles.FirstOrDefault(r => r.Name == "admin");
@@ -48,10 +48,11 @@ namespace EventSystem.Admin
             }
 
             this.GridViewUsers.DataSource = dTable;
-            GridViewUsers.DataBind();
+            this.GridViewUsers.DataBind();
+
+            this.GridViewUsers.UseAccessibleHeader = true;
+            this.GridViewUsers.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
-
-
 
         protected void GridViewUsers_RowDataBound(object sender, GridViewRowEventArgs e)
         {
@@ -87,6 +88,16 @@ namespace EventSystem.Admin
             }
 
             BindGridviewData();
+        }
+
+        protected void GridViewUsers_PageIndexChanged(object sender, EventArgs e)
+        {
+            BindGridviewData();
+        }
+
+        protected void GridViewUsers_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridViewUsers.PageIndex = e.NewPageIndex;
         }
     }
 }

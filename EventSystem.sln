@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSystem", "EventSystem\EventSystem.csproj", "{EBE2041A-5BC2-4799-B153-D7255009B001}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSystem.Common", "EventSystem.Common\EventSystem.Common.csproj", "{526B1B70-68DE-4615-9C57-614268823E87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSystem", "EventSystem\EventSystem.csproj", "{EBE2041A-5BC2-4799-B153-D7255009B001}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EBE2041A-5BC2-4799-B153-D7255009B001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EBE2041A-5BC2-4799-B153-D7255009B001}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EBE2041A-5BC2-4799-B153-D7255009B001}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EBE2041A-5BC2-4799-B153-D7255009B001}.Release|Any CPU.Build.0 = Release|Any CPU
 		{526B1B70-68DE-4615-9C57-614268823E87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{526B1B70-68DE-4615-9C57-614268823E87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{526B1B70-68DE-4615-9C57-614268823E87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{526B1B70-68DE-4615-9C57-614268823E87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBE2041A-5BC2-4799-B153-D7255009B001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBE2041A-5BC2-4799-B153-D7255009B001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBE2041A-5BC2-4799-B153-D7255009B001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBE2041A-5BC2-4799-B153-D7255009B001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
