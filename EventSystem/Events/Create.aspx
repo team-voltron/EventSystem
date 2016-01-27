@@ -28,25 +28,25 @@
                     Display="None">
                 </asp:RequiredFieldValidator>
                 <br />
-                <asp:DropDownList ID="DropDownCategories" 
+                <asp:DropDownList ID="DropDownCategories"
                     runat="server"
-                    AppendDataBoundItems="true" 
-                    DataTextField="Name" 
+                    AppendDataBoundItems="true"
+                    DataTextField="Name"
                     DataValueField="Id"
                     CssClass="form-control">
                     <asp:ListItem Text="Select category"></asp:ListItem>
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator 
-                    ID="RequiredCategory" 
-                    runat="server" 
-                    ControlToValidate="DropDownCategories" 
+                <asp:RequiredFieldValidator
+                    ID="RequiredCategory"
+                    runat="server"
+                    ControlToValidate="DropDownCategories"
                     ErrorMessage="Category is not selected!">
                 </asp:RequiredFieldValidator>
                 <br />
                 <asp:Button runat="server"
                     ID="btnCreateEvent"
                     Text="Create event"
-                    CssClass="btn btn-primary" 
+                    CssClass="btn btn-primary"
                     OnClick="BtnCreateEvent_Click" />
             </div>
         </div>
