@@ -171,6 +171,7 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\EditCategories.aspx" />
     <Content Include="Admin\EditEvents.aspx" />
+    <Content Include="Admin\EditUsers.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -351,6 +352,13 @@
     </Compile>
     <Compile Include="Admin\EditEvents.aspx.designer.cs">
       <DependentUpon>EditEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUsers.aspx.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUsers.aspx.designer.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
