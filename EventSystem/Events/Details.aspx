@@ -1,7 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Details.aspx.cs" Inherits="EventSystem.Events.Details" %>
 
+<%@ Register
+    TagPrefix="uc"
+    TagName="LikeControl"
+    Src="~/Controls/LikeControl.ascx" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:FormView runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
+    <asp:FormView CssClass="col-md-12" runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
         <ItemTemplate>
             <div class="row">
                 <div class="col-md-8">
@@ -9,9 +14,6 @@
                         <h1><%: Title %></h1>
                         <h2><%#: Item.Name %></h2>
                         <p><i>by <%#: Item.Author.UserName %></i></p>
-                        <p>
-                            <%#: Item.Description %>
-                        </p>
                     </header>
                     <div class="row-fluid">
                         <div class="span12 book-description">
@@ -22,6 +24,15 @@
                 <div class="col-md-4">
                     <div class="col-md-10 col-md-offset-1">
                         <img src="<%# Item.ImageLocation %>" width="100%" />
+                    </div>
+                    <div class="col-md-10 col-md-offset-1">
+                        <uc:likecontrol
+                            runat="server"
+                            id="LikeControl"
+                            value="<%# GetLikes(Item) %>"
+                            currentuservote="<%# GetCurrentUserVote(Item) %>"
+                            dataid="<%# Item.Id %>"
+                            onlike="LikeControl_Like" />
                     </div>
                 </div>
             </div>
@@ -57,24 +68,23 @@
                 </div>
                 <div class="col-md-6">
                     <asp:ListView runat="server"
-                        ID="Participants"
+                        ID="EventParticipants"
                         DataSource="<%# Item.Users %>"
                         ItemType="EventSystem.Models.AppUser"
                         InsertItemPosition="FirstItem">
                         <LayoutTemplate>
                             <h3 class="text-center">Participants</h3>
-                            <asp:Label runat="server" Visible="false" ID="Participant"></asp:Label>
+                            <asp:Label runat="server" Visible="false" ID="ParticipantMessage"></asp:Label>
                             <div id="itemPlaceholder" runat="server"></div>
                         </LayoutTemplate>
                         <ItemTemplate>
                             <div class="jumbotron comment">
-                                <h3>Username - <%# Item.UserName %></h3>
-                                <h3>Email - <%# Item.Email %></h3>
+                                <h4>Username - <%# Item.UserName %></h4>
+                                <h4>Email - <%# Item.Email %></h4>
                             </div>
                         </ItemTemplate>
                         <EmptyDataTemplate>
-                            <h3>
-                                There are no participants for this event.
+                            <h3>There are no participants for this event.
                             </h3>
                         </EmptyDataTemplate>
                         <EmptyItemTemplate>
@@ -82,7 +92,7 @@
                             </h3>
                         </EmptyItemTemplate>
                         <InsertItemTemplate>
-                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" />
+                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" OnClick="JoinEventBtn_Click" ID="JoinEventBtn" />
                         </InsertItemTemplate>
                     </asp:ListView>
                 </div>

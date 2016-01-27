@@ -18,7 +18,7 @@
             this.users = new HashSet<AppUser>();
             this.comments = new HashSet<Comment>();
             this.likes = new HashSet<Like>();
-            this.ImageLocation = Path.Combine("~/", "Public", "Default", "Event", "1453918504_free-20.png");
+            this.ImageLocation = "/Public/Default/Event/1453918504_free-20.png";
         }
 
         public int Id { get; set; }

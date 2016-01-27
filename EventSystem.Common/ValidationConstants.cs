@@ -10,5 +10,7 @@
 
         public const int MinCommentContentLenght = 1;
         public const int MaxCommentContentLenght = 2500;
+
+        public static string[] AllowedExtensions = new []{ "png", "jpg", "gif", "bmp" };
     }
 }
