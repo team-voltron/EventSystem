@@ -18,6 +18,10 @@
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (this.IsPostBack)
+            {
+                return;
+            }
         }
 
         public Event FormVideEventDetails_GetItem([QueryString("id")]int? eventId)
@@ -57,6 +61,34 @@
             };
 
             this.dbContext.Comments.Add(comment);
+            this.dbContext.SaveChanges();
+            this.DataBind();
+        }
+
+        protected void JoinEventBtn_Click(object sender, EventArgs e)
+        {
+            var eventId = int.Parse(this.Request.QueryString["Id"]);
+            var userId = this.User.Identity.GetUserId();
+            var currentEvent = this.dbContext.Events.FirstOrDefault(ev => ev.Id == eventId);
+            var user = this.dbContext.Users.Where(u => u.Id == userId).FirstOrDefault();
+
+            var participantSection = this.FormVideEventDetails.FindControl("EventParticipants") as ListView;
+            var messageLabel = participantSection.FindControl("ParticipantMessage") as Label;
+
+            if (user == null || currentEvent == null)
+            {
+                throw new Exception("There was a fatal error!");
+            }
+
+            if (currentEvent.Users.Any(u => u.Id == userId))
+            {
+                messageLabel.Text = "You cannot join the same event twice!";
+                messageLabel.Visible = true;
+                messageLabel.CssClass = "text-danger";
+                return;
+            }
+
+            currentEvent.Users.Add(user);
             this.dbContext.SaveChanges();
             this.DataBind();
         }

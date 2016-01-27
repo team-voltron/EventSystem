@@ -57,19 +57,19 @@
                 </div>
                 <div class="col-md-6">
                     <asp:ListView runat="server"
-                        ID="Participants"
+                        ID="EventParticipants"
                         DataSource="<%# Item.Users %>"
                         ItemType="EventSystem.Models.AppUser"
                         InsertItemPosition="FirstItem">
                         <LayoutTemplate>
                             <h3 class="text-center">Participants</h3>
-                            <asp:Label runat="server" Visible="false" ID="Participant"></asp:Label>
+                            <asp:Label runat="server" Visible="false" ID="ParticipantMessage"></asp:Label>
                             <div id="itemPlaceholder" runat="server"></div>
                         </LayoutTemplate>
                         <ItemTemplate>
                             <div class="jumbotron comment">
-                                <h3>Username - <%# Item.UserName %></h3>
-                                <h3>Email - <%# Item.Email %></h3>
+                                <h4>Username - <%# Item.UserName %></h4>
+                                <h4>Email - <%# Item.Email %></h4>
                             </div>
                         </ItemTemplate>
                         <EmptyDataTemplate>
@@ -82,7 +82,7 @@
                             </h3>
                         </EmptyItemTemplate>
                         <InsertItemTemplate>
-                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" />
+                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" OnClick="JoinEventBtn_Click" ID="JoinEventBtn"/>
                         </InsertItemTemplate>
                     </asp:ListView>
                 </div>
