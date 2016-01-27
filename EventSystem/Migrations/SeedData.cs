@@ -35,6 +35,94 @@
                 Author = admin,
                 DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
             });
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[0],
+                Name = "What is not Lorem Ipsum?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[2],
+                Name = "What is Lorem Ipsum? A?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[3],
+                Name = "What is ...?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[4],
+                Name = "What is ...?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[3],
+                Name = "What...?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[2],
+                Name = "Who is... ?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[0],
+                Name = "Who is prof.X ?",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[2],
+                Name = "Web Forms",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[2],
+                Name = "ASP.NET",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
+
+            this.Events.Add(new Event()
+            {
+                Category = this.Categories[2],
+                Name = "ASP.NET WebForms",
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                Author = admin,
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5))
+            });
         }
 
         public static Random Rand
