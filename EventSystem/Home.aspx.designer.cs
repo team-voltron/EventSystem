@@ -13,6 +13,33 @@ namespace EventSystem {
     public partial class Home {
         
         /// <summary>
+        /// LabelUsersTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelUsersTotal;
+        
+        /// <summary>
+        /// LabelTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTime;
+        
+        /// <summary>
+        /// LabelEventsTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelEventsTotal;
+        
+        /// <summary>
         /// UsersLiveView control.
         /// </summary>
         /// <remarks>
