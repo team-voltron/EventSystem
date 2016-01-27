@@ -47,6 +47,16 @@ namespace EventSystem.Events
                 CategoryId = int.Parse(this.DropDownCategories.SelectedValue)
             };
 
+            if (!string.IsNullOrEmpty(this.dtEventStart.Text))
+            {
+                DateTime startDate;
+
+                if (DateTime.TryParse(this.dtEventStart.Text, out startDate))
+                {
+                    newEvent.DateTimeStarts = startDate;
+                }
+            }
+ 
             if (this.EventImage.HasFile)
             {
                 string filename = Path.GetFileName(this.EventImage.FileName);

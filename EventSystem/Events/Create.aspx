@@ -17,7 +17,7 @@
                     Display="None">
                 </asp:RequiredFieldValidator>
                 <br />
-                <label for="tb.Description">Description</label>
+                <label for="tbDescription">Description</label>
                 <asp:TextBox runat="server" ID="tbDescription" CssClass="form-control"></asp:TextBox>
                 <asp:RequiredFieldValidator
                     CssClass="text-danger"
@@ -42,6 +42,8 @@
                     ControlToValidate="DropDownCategories"
                     ErrorMessage="Category is not selected!">
                 </asp:RequiredFieldValidator>
+                <br />
+                <asp:TextBox TextMode="DateTimeLocal" runat="server" ID="dtEventStart"></asp:TextBox>
                 <br />
                 <asp:FileUpload ID="EventImage" runat="server"  />
                 <br />
