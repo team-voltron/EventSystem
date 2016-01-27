@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="EventSystem.Home" %>
 
 <%--cache duration in seconds--%>
-<%@ OutputCache Duration="20" VaryByParam="None" %>
+<%--<%@ OutputCache Duration="20" VaryByParam="None" %>--%>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
