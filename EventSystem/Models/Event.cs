@@ -11,11 +11,13 @@
     {
         private ICollection<AppUser> users;
         private ICollection<Comment> comments;
+        private ICollection<Like> likes;
 
         public Event()
         {
             this.users = new HashSet<AppUser>();
             this.comments = new HashSet<Comment>();
+            this.likes = new HashSet<Like>();
             this.ImageLocation = Path.Combine("~/", "Public", "Default", "Event", "1453918504_free-20.png");
         }
 
@@ -54,6 +56,12 @@
         {
             get { return this.comments; }
             set { this.comments = value; }
+        }
+
+        public virtual ICollection<Like> Likes
+        {
+            get { return this.likes; }
+            set { this.likes = value; }
         }
     }
 }

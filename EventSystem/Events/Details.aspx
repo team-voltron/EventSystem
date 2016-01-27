@@ -3,17 +3,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:FormView runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
         <ItemTemplate>
-            <header>
-                <h1><%: Title %></h1>
-                <p><%#: Item.Name %></p>
-                <p><i>by <%#: Item.Author.UserName %></i></p>
-                <p>
-                    <%#: Item.Description %>
-                </p>
-            </header>
-            <div class="row-fluid">
-                <div class="span12 book-description">
-                    <p><%#: Item.Description %></p>
+            <div class="row">
+                <div class="col-md-8">
+                    <header>
+                        <h1><%: Title %></h1>
+                        <h2><%#: Item.Name %></h2>
+                        <p><i>by <%#: Item.Author.UserName %></i></p>
+                        <p>
+                            <%#: Item.Description %>
+                        </p>
+                    </header>
+                    <div class="row-fluid">
+                        <div class="span12 book-description">
+                            <p><%#: Item.Description %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-10 col-md-offset-1">
+                        <img src="<%# Item.ImageLocation %>" width="100%" />
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -24,7 +33,7 @@
                         ItemType="EventSystem.Models.Comment"
                         InsertItemPosition="FirstItem">
                         <LayoutTemplate>
-                            <h3>Comment section</h3>
+                            <h3 class="text-center">Comment section</h3>
                             <asp:Label runat="server" Visible="false" ID="CommentMessage"></asp:Label>
                             <div id="itemPlaceholder" runat="server"></div>
                         </LayoutTemplate>
@@ -43,6 +52,37 @@
                                 <br />
                                 <asp:LinkButton CssClass="btn btn-success" ID="InsertButton" runat="server" OnClick="InsertButton_Click" Text="Post comment"></asp:LinkButton>
                             </div>
+                        </InsertItemTemplate>
+                    </asp:ListView>
+                </div>
+                <div class="col-md-6">
+                    <asp:ListView runat="server"
+                        ID="Participants"
+                        DataSource="<%# Item.Users %>"
+                        ItemType="EventSystem.Models.AppUser"
+                        InsertItemPosition="FirstItem">
+                        <LayoutTemplate>
+                            <h3 class="text-center">Participants</h3>
+                            <asp:Label runat="server" Visible="false" ID="Participant"></asp:Label>
+                            <div id="itemPlaceholder" runat="server"></div>
+                        </LayoutTemplate>
+                        <ItemTemplate>
+                            <div class="jumbotron comment">
+                                <h3>Username - <%# Item.UserName %></h3>
+                                <h3>Email - <%# Item.Email %></h3>
+                            </div>
+                        </ItemTemplate>
+                        <EmptyDataTemplate>
+                            <h3>
+                                There are no participants for this event.
+                            </h3>
+                        </EmptyDataTemplate>
+                        <EmptyItemTemplate>
+                            <h3>There are no participants for this event.
+                            </h3>
+                        </EmptyItemTemplate>
+                        <InsertItemTemplate>
+                            <asp:Button runat="server" Text="Join event" CssClass="btn btn-success btn-block" />
                         </InsertItemTemplate>
                     </asp:ListView>
                 </div>

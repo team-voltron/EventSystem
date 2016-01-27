@@ -60,10 +60,5 @@
             this.dbContext.SaveChanges();
             this.DataBind();
         }
-
-        protected void InsertButton1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
