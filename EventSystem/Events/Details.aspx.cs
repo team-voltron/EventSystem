@@ -53,15 +53,17 @@
                 return;
             }
 
-            var comment = new Comment()
+            var userId = this.User.Identity.GetUserId();
+            var user = this.dbContext.Users.Where(u => u.Id == userId).FirstOrDefault();
+            var currentEvent = this.dbContext.Events.Find(eventId);
+
+            currentEvent.Comments.Add(new Comment
             {
                 Content = commentText,
-                AuthorId = this.User.Identity.GetUserId(),
                 DateCreated = DateTime.Now,
-                EventId = eventId,
-            };
+                Author = user
+            });
 
-            this.dbContext.Comments.Add(comment);
             this.dbContext.SaveChanges();
             this.DataBind();
         }
