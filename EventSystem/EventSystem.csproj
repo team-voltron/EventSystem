@@ -174,6 +174,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="ControlsTestingPage.aspx" />
+    <Content Include="Controls\MindYourLanguage.ascx" />
+    <Content Include="Controls\Spinner.ascx" />
     <Content Include="Events\All.aspx" />
     <Content Include="Events\Create.aspx" />
     <Content Include="Events\Details.aspx" />
@@ -184,6 +187,15 @@
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Home.aspx" />
+    <Content Include="Public\Default\Event\1453918504_free-20.png" />
+    <Content Include="Public\Default\Event\1453918506_free-20.png" />
+    <Content Include="Public\Default\Event\1453918508_free-20.png" />
+    <Content Include="Public\Default\Event\1453918512_free-20.png" />
+    <Content Include="Public\Default\Event\1453918514_free-20.png" />
+    <Content Include="Public\Default\Event\1453918518_free-20.png" />
+    <Content Include="Public\Default\Event\1453918520_free-20.png" />
+    <Content Include="Public\Default\Event\1453918523_free-20.png" />
+    <Content Include="Public\Default\Event\1453918524_free-20.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -356,6 +368,27 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="ControlsTestingPage.aspx.cs">
+      <DependentUpon>ControlsTestingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlsTestingPage.aspx.designer.cs">
+      <DependentUpon>ControlsTestingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MindYourLanguage.ascx.cs">
+      <DependentUpon>MindYourLanguage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MindYourLanguage.ascx.designer.cs">
+      <DependentUpon>MindYourLanguage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Spinner.ascx.cs">
+      <DependentUpon>Spinner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Spinner.ascx.designer.cs">
+      <DependentUpon>Spinner.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Events\All.aspx.cs">
       <DependentUpon>All.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
