@@ -6,7 +6,7 @@
     Src="~/Controls/LikeControl.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:FormView runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
+    <asp:FormView CssClass="col-md-12" runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
         <ItemTemplate>
             <div class="row">
                 <div class="col-md-8">
