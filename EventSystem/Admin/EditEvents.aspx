@@ -36,7 +36,7 @@
 
             <asp:BoundField
                 DataField="Author.UserName"
-                HeaderText="Author.Name"
+                HeaderText="Author.UserName"
                 SortExpression="Author.UserName" />
 
             <asp:CommandField
