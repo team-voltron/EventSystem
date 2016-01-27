@@ -15,7 +15,8 @@
         AllowSorting="true"
         AllowPaging="true"
         PageSize="5"
-        DataKeyNames="ID">
+        DataKeyNames="ID"
+        CssClass="table table-responsive">
             
         <Columns>
             <asp:BoundField
@@ -30,15 +31,16 @@
 
             <asp:BoundField
                 DataField="Category.Name"
-                HeaderText="Category"
+                HeaderText="Category.Name"
                 SortExpression="Category.Name" />
 
             <asp:BoundField
                 DataField="Author.UserName"
-                HeaderText="Author"
+                HeaderText="Author.Name"
                 SortExpression="Author.UserName" />
 
             <asp:CommandField
+                HeaderText="Action"
                 ShowEditButton="true"
                 ShowDeleteButton="true" />
         </Columns>
