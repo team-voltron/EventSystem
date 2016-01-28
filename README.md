@@ -13,33 +13,58 @@
 ----------
 ## Events have
 - Description:
-	- Date
-	- Place (Town/Club)
-	- Short info
-	- Image
-- Users - list of users that will visit (have joined) the event
-- Comments (created by users)
-- Rating - every user (auth. user) can rate the event
+	- Start Date
+	- Date Created
+	- Category
+	- Description
+	- Image 
+		- default image if none is provided
+		- image can be uploaded
+- Participants 
+	- list of users that have joined the event
+- Comments 
+	- created by users
+	- stored with current date (DateTime.Now)
+	- Listed with UserName/Date/Content
+- Likes 
+	- every user that is authorized can rate the event
+	- this is a custom control
 
 ## Public part (accessible without authentication)
-- View events (w/o comments) 
-- User login and user registration forms
+- Home page
+	- includes caching
+	- control that handles caching for 10 minutes for the statistics
+	- displays top 5 categories ordered by events.count()
+	- displays top 5 events ordered by up-coming event and then by comments.count() 
+	- drag(able) functionality for the panels
+- User log in and user registration forms
 
 ## Private part (available for registered users)
-- View events with comments
-- View details for event
-- Take part in events (Join event)
-- Rate event (only once)
-- Write comments for events
-- User's profiles management functionality
-	- edit profile
-	- upload profile picture
+- All events page
+	- lists all events
+	- has search by event title 
+- Create event page
+	- can create new event
+- View event details page
+	- comments
+	- write comments for events
+	- participants
+	- user can like (can view total like counts)
+	- take part in events (Join event)
+- View events by category
+	- displays all events for the current directory
+- View events by title search
+	- displays all events for the current search query
+- User profile page
+	- edit profile (change password)
 
 ## Administrative part (available for administrators only)
-- create / edit / delete users and other administrators
+- admin can make other users administrators
 - create / edit / delete events and comments
-- remove users from events
+- create / edit / delete events and category
 
-### Optionally
-- categories
-- tags
+## Controls used
+- Like control - used in event details
+- Stats control - used on home page
+- Mind your language - not implemented but can be seen on
+	- http://localhost:65402/ControlsTestingPage.aspx.cs
