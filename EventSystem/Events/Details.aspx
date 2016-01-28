@@ -50,7 +50,7 @@
                         </LayoutTemplate>
                         <ItemTemplate>
                             <div class="jumbotron comment">
-                                <h6>- <strong><%# Item.Author.UserName %></strong> - <%# Item.DateCreated %></h6>
+                                <h6>- <strong><%#: Item.Author.UserName %></strong> - <%# Item.DateCreated %></h6>
                                 <h4><%#: Item.Content %></h4>
                             </div>
                         </ItemTemplate>
