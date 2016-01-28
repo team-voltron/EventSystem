@@ -7,19 +7,18 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<div class="jumbotron">
-    <div class="row">
-        <h1 class="text-center">Welcome to our </h1>
-        <h3 class="text-center">super mega yaka Event system(a) manager</h3>
-        <h6 class="text-center"><em>Note: The statistics are chached for <%= EventSystem.Common.CommonConstants.TimeForChaching/60 %> minutes</em></h6>
-
-        <hr />
-
-        <uc:StatsControl runat="server"/>
-    </div>
+    <div class="container">
+        <div class="modal-content main-stats">
+            <div class="row">
+                <h1 class="text-center">Welcome to our </h1>
+                <h3 class="text-center">super mega yaka Event system(a) manager</h3>
+                <h6 class="text-center"><em>Note: The statistics are chached for <%= EventSystem.Common.CommonConstants.TimeForChaching/60 %> minutes</em></h6>
+                <uc:StatsControl runat="server" />
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
-        <div class="panel panel-default">
+        <div class="panel panel-default  modal-content">
             <div class="panel-heading">
                 <h3 class="text-center">Users
                 </h3>
@@ -58,6 +57,7 @@
                 </ItemTemplate>
                 <EmptyDataTemplate>
                     No categories found.
+               
                 </EmptyDataTemplate>
 
             </asp:ListView>
@@ -65,7 +65,7 @@
     </div>
 
     <div class="col-md-6">
-        <div class="panel panel-default">
+        <div class="panel panel-default  modal-content">
             <div class="panel-heading">
                 <h3 class="text-center">Events
                 </h3>
@@ -78,14 +78,11 @@
                     <table class="table table-responsive">
                         <thead>
                             <tr>
-                                <th>
-                                    Name
+                                <th>Name
                                 </th>
-                                <th class="text-center">
-                                    Starts
+                                <th class="text-center">Starts
                                 </th>
-                                <th class="text-right">
-                                    Comments
+                                <th class="text-right">Comments
                                 </th>
                             </tr>
                         </thead>
@@ -115,6 +112,7 @@
                 </ItemTemplate>
                 <EmptyDataTemplate>
                     No events found.
+               
                 </EmptyDataTemplate>
             </asp:ListView>
         </div>

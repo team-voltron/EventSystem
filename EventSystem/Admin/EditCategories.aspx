@@ -1,11 +1,9 @@
 ﻿<%@ Page Title="Edit categories" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditCategories.aspx.cs" Inherits="EventSystem.Admin.EditCategories" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>
-        <%#: Title %>
-    </h1>
+    <h3 class="text-center alert alert-info col-md-8 col-md-offset-2 modal-content"><%: this.Title %></h3>
 
-    <hr />
+    <asp:Panel runat="server" CssClass="col-md-8 col-md-offset-2 modal-content">
 
     <asp:ListView runat="server"
         ID="ListViewCategories"
@@ -15,10 +13,11 @@
         DeleteMethod="ListViewCategories_DeleteItem"
         InsertMethod="ListViewCategories_InsertItem"
         InsertItemPosition="LastItem"
+       
         DataKeyNames="ID">
 
         <LayoutTemplate>
-            <table class="table table-responsive">
+            <table class="table table-responsive table-condensed table-striped info content-table">
                 <thead>
                     <tr>
                         <th>
@@ -38,6 +37,7 @@
                             <asp:DataPager runat="server" ID="DataPagerCategories" PagedControlID="ListViewCategories" PageSize="5">
                                 <Fields>
                                     <asp:NumericPagerField />
+
                                 </Fields>
                             </asp:DataPager>
                             <asp:DataPager runat="server" ID="DataPagerCategoriesOther" PagedControlID="ListViewCategories"
@@ -55,20 +55,22 @@
                                     $('#InsertTableRowForm').show();
                                  }" 
                                 ID="LinkButtonInsert" 
-                                CssClass="btn btn-success" 
+                                CssClass="btn btn-sm btn-success" 
                                 Text="Insert" />
                         </td>
                     </tr>
                 </tbody>
             </table>
+
         </LayoutTemplate>
+
         
         <ItemTemplate>
             <tr>
                 <td><%#: Item.Name %></td>
                 <td>
-                    <asp:LinkButton CssClass="btn btn-warning" runat="server" ID="ButtonEdit" CommandName="Edit" Text="Edit" />
-                    <asp:LinkButton CssClass="btn btn-danger" runat="server" ID="ButtonDelete" CommandName="Delete" Text="Delete" />
+                    <asp:LinkButton CssClass="btn btn-sm btn-warning" runat="server" ID="ButtonEdit" CommandName="Edit" Text="Edit" />
+                    <asp:LinkButton CssClass="btn btn-sm btn-danger" runat="server" ID="ButtonDelete" CommandName="Delete" Text="Delete" />
                 </td>
             </tr>
         </ItemTemplate>
@@ -79,8 +81,8 @@
                     <asp:TextBox runat="server" ID="TextBoxName" Text="<%#: BindItem.Name %>" />
                 </td>
                 <td>
-                    <asp:LinkButton CssClass="btn btn-warning" runat="server" ID="ButtonEdit" CommandName="Update" Text="Save" />
-                    <asp:LinkButton CssClass="btn btn-danger" runat="server" ID="ButtonDelete" CommandName="Cancel" Text="Cancel" />
+                    <asp:LinkButton CssClass="btn btn-sm btn-warning" runat="server" ID="ButtonEdit" CommandName="Update" Text="Save" />
+                    <asp:LinkButton CssClass="btn btn-sm btn-danger" runat="server" ID="ButtonDelete" CommandName="Cancel" Text="Cancel" />
                 </td>
             </tr>
         </EditItemTemplate>
@@ -91,10 +93,12 @@
                     <asp:TextBox runat="server" ID="TextBoxName" Text="<%#: BindItem.Name %>" />
                 </td>
                 <td>
-                    <asp:LinkButton CssClass="btn btn-warning" runat="server" ID="ButtonEdit" CommandName="Insert" Text="Insert" OnClientClick />
-                    <asp:LinkButton CssClass="btn btn-danger" runat="server" ID="ButtonDelete" CommandName="Cancel" Text="Cancel" />
+                    <asp:LinkButton CssClass="btn btn-sm btn-warning" runat="server" ID="ButtonEdit" CommandName="Insert" Text="Insert" OnClientClick />
+                    <asp:LinkButton CssClass="btn btn-sm btn-danger" runat="server" ID="ButtonDelete" CommandName="Cancel" Text="Cancel" />
                 </td>
             </tr>
         </InsertItemTemplate>
+
     </asp:ListView>
+        </asp:Panel>
 </asp:Content>

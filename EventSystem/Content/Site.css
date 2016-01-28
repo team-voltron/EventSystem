@@ -4,8 +4,13 @@
 }
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-    padding-top: 50px;
+    padding-top: 60px;
     padding-bottom: 20px;
+    font-family: Ubuntu !important;
+    background-color: dimgrey;
+}
+.text-center, strong, h1, h2, h3, h4, h5, h6{
+    font-family: Ubuntu;
 }
 
 /* Wrapping element */
@@ -39,6 +44,7 @@ body {
 
 .navbar-default {
     background-color: #375A7F;
+    border-color:#375A7F;
 }
 
 .navbar-default a{
@@ -111,11 +117,11 @@ input[type="select"] {
 .pagination-ys table > tbody > tr > td > span {
     position: relative;
     float: left;
-    padding: 8px 12px;
+    padding: 3px 5px;
     line-height: 1.42857143;
     text-decoration: none;
-    color: #dd4814;
-    background-color: #ffffff;
+    color: white;
+    background-color: #222222;
     border: 1px solid #dddddd;
     margin-left: -1px;
 }
@@ -123,13 +129,13 @@ input[type="select"] {
 .pagination-ys table > tbody > tr > td > span {
     position: relative;
     float: left;
-    padding: 8px 12px;
+    padding: 6px 8px;
     line-height: 1.42857143;
     text-decoration: none;    
     margin-left: -1px;
     z-index: 2;
-    color: #aea79f;
-    background-color: #f5f5f5;
+    color: white;
+    background-color: #2A9FD6;
     border-color: #dddddd;
     cursor: default;
 }
@@ -151,7 +157,19 @@ input[type="select"] {
 .pagination-ys table > tbody > tr > td > span:hover,
 .pagination-ys table > tbody > tr > td > a:focus,
 .pagination-ys table > tbody > tr > td > span:focus {
-    color: #97310e;
-    background-color: #eeeeee;
+    color: white;
+    background-color: #2A9FD6;
     border-color: #dddddd;
+}
+
+.content-table{
+    margin-top:30px;
+}
+
+.edit-btn{
+    margin-top:20px;
+}
+
+.main-stats{
+    margin-bottom:30px;
 }

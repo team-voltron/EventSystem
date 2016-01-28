@@ -50,8 +50,8 @@ namespace EventSystem.Admin
             this.GridViewUsers.DataSource = dTable;
             this.GridViewUsers.DataBind();
 
-            this.GridViewUsers.UseAccessibleHeader = true;
-            this.GridViewUsers.HeaderRow.TableSection = TableRowSection.TableHeader;
+            //this.GridViewUsers.UseAccessibleHeader = true;
+            //this.GridViewUsers.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
         protected void GridViewUsers_RowDataBound(object sender, GridViewRowEventArgs e)

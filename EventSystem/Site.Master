@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Voltron</title>
-
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400italic,700,400,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -17,7 +17,7 @@
 
 </head>
 <body>
-    
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -41,7 +41,7 @@
         </asp:ScriptManager>
 
         <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="header-container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
@@ -78,7 +78,7 @@
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li >
+                                <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
@@ -87,22 +87,22 @@
                 </div>
             </div>
         </div>
+        <div>    
+        <p class="text-muted">
+                    <asp:SiteMapPath runat="server"></asp:SiteMapPath>
+                </p>
+            </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
 
-
-            
         </div>
         <footer class="footer fixed-bottom">
-                <div class="container">
-
-                    <p class="text-muted">
-                        <asp:SiteMapPath runat="server"></asp:SiteMapPath>
-                    </p>
-                    <p class="text-muted">&copy; <%: DateTime.Now.Year %> - Our ASP.NET Application</p>
-                </div>
-            </footer>
+            <div class="container">
+                
+                <p class="text-muted">&copy; <%: DateTime.Now.Year %> - Our ASP.NET Application</p>
+            </div>
+        </footer>
     </form>
 </body>
 </html>
