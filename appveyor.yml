@@ -7,5 +7,3 @@ before_build:
 build:
   project: EventsSystem.sln
   verbosity: minimal
-cache:
-  - packages -> **\packages.config
