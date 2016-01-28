@@ -7,8 +7,23 @@ body {
     padding-top: 60px;
     padding-bottom: 20px;
     font-family: Ubuntu !important;
-    background-color: dimgrey;
+    /*background-color: darkslategrey;*/
+
+    background-image: url(../Public/Images/IehB7-opacity.png);
+    background-repeat: repeat;
 }
+
+.site-map{
+    color:white;
+    
+}
+
+.site-map a{
+    color: white;
+    /*text-decoration: none;*/
+}
+
+
 .text-center, strong, h1, h2, h3, h4, h5, h6{
     font-family: Ubuntu;
 }
@@ -172,4 +187,41 @@ input[type="select"] {
 
 .main-stats{
     margin-bottom:30px;
+}
+
+.content-admin-panel{
+    padding: 30px;
+}
+
+.content-create-panel{
+    padding: 50px;
+}
+
+/* Button upload */
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+input[readonly] {
+  background-color: white !important;
+  cursor: text !important;
+}
+.non-decorated{
+  text-decoration: none,line-through;
+  color: white;
 }

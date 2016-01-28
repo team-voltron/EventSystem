@@ -169,6 +169,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AdminPanel.aspx" />
     <Content Include="Admin\EditCategories.aspx" />
     <Content Include="Admin\EditEvents.aspx" />
     <Content Include="Admin\EditUsers.aspx" />
@@ -203,6 +204,10 @@
     <Content Include="Public\Default\Event\1453918520_free-20.png" />
     <Content Include="Public\Default\Event\1453918523_free-20.png" />
     <Content Include="Public\Default\Event\1453918524_free-20.png" />
+    <Content Include="Public\Images\IehB7-opacity.png" />
+    <Content Include="Public\Images\IehB7.png" />
+    <Content Include="Public\Images\tileable-metal-textures-5.jpg" />
+    <Content Include="Public\Images\white_carbon_preview.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -357,6 +362,13 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\EditCategories.aspx.cs">
       <DependentUpon>EditCategories.aspx</DependentUpon>

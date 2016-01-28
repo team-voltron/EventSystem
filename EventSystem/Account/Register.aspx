@@ -1,12 +1,12 @@
 ﻿<%@ Page Title="Register" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="EventSystem.Account.Register" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <h2 class="alert alert-info col-md-8 col-md-offset-2 modal-content"><%: Title %>.</h2>
     <p class="text-danger">
         <asp:Literal runat="server" ID="ErrorMessage" />
     </p>
 
-    <div class="form-horizontal">
+    <div class="form-horizontal  col-md-8 col-md-offset-2 modal-content">
         <h4>Create a new account</h4>
         <hr />
         <asp:ValidationSummary runat="server" CssClass="text-danger" />

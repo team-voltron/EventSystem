@@ -32,14 +32,14 @@
                     HeaderText="Date Created"
                     SortExpression="DateCreated" />
 
-                <asp:TemplateField HeaderText="City" SortExpression="City" >
+                <asp:TemplateField HeaderText="Category" SortExpression="Category" >
                     <EditItemTemplate>
                         <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"
                             AutoPostBack="true">
                         </asp:DropDownList>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("Category.Name") %>'></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Item.Category.Name %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
 

@@ -55,14 +55,18 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <asp:LoginView runat="server" ID="LoginViewMenu">
                             <LoggedInTemplate>
-                                <li><a runat="server" href="~/Events/All">Events</a></li>
+                                <li><a runat="server" href="~/Events/Create">Create Event</a></li>
+                                <li><a runat="server" href="~/Events/All">All Events</a></li>
                             </LoggedInTemplate>
                             <RoleGroups>
                                 <asp:RoleGroup Roles="admin">
                                     <ContentTemplate>
-                                        <li><a runat="server" href="~/Admin/EditCategories">Edit Categories</a></li>
+                                        <li><a runat="server" href="~/Events/Create">Create Event</a></li>
+                                        <li><a runat="server" href="~/Events/All">All Events</a></li>
+                                        <li><a runat="server" href="~/AdminPanel">Admin Panel</a></li>
+                                        <%--<li><a runat="server" href="~/Admin/EditCategories">Edit Categories</a></li>
                                         <li><a runat="server" href="~/Admin/EditEvents">Edit Events</a></li>
-                                        <li><a runat="server" href="~/Admin/EditUsers">Edit Users</a></li>
+                                        <li><a runat="server" href="~/Admin/EditUsers">Edit Users</a></li>--%>
                                     </ContentTemplate>
                                 </asp:RoleGroup>
                             </RoleGroups>
@@ -87,11 +91,11 @@
                 </div>
             </div>
         </div>
-        <div>    
-        <p class="text-muted">
-                    <asp:SiteMapPath runat="server"></asp:SiteMapPath>
-                </p>
-            </div>
+        <div>
+            <p class="text-muted site-map">
+                <asp:SiteMapPath runat="server"></asp:SiteMapPath>
+            </p>
+        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -99,8 +103,11 @@
         </div>
         <footer class="footer fixed-bottom">
             <div class="container">
-                
-                <p class="text-muted">&copy; <%: DateTime.Now.Year %> - Our ASP.NET Application</p>
+                <h4 class="text-muted text-center"><b>Team Voltron</b></h4>
+                <p class="text-muted text-center">&copy; <%: DateTime.Now.Year %> - Our ASP.NET Application</p>
+
+
+
             </div>
         </footer>
     </form>

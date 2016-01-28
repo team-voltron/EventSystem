@@ -26,8 +26,18 @@
         {
             if (!IsPostBack)
             {
-                
+                //BindMyData();
             }
+        }
+
+
+        private void BindMyData()
+        {
+            var cats = this.dbContext.Events;
+
+            this.GridViewBooks.DataSource = cats.ToArray();
+
+            this.DataBind();
         }
 
         public void GridViewBooks_UpdateItem(int id)
@@ -39,6 +49,23 @@
 
                 return;
             }
+
+            
+
+            var grid = this.GridViewBooks;
+
+            var editItem = grid.Rows[GridViewBooks.EditIndex].FindControl("DropDownList1") as DropDownList;
+
+            var selectedCatName = editItem.SelectedValue;
+
+            var cat = this.dbContext.Categories.FirstOrDefault(c => c.Name == selectedCatName);
+
+            if (cat != null)
+            {
+                eventToUpdate.Category = cat;
+
+            }
+
 
             this.TryUpdateModel(eventToUpdate);
             if (this.ModelState.IsValid)
@@ -82,13 +109,12 @@
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void GridViewBooks_RowEditing(object sender, GridViewEditEventArgs e)
         {
             GridViewBooks.EditIndex = e.NewEditIndex;
-            this.DataBind();
         }
     }
 }

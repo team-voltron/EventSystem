@@ -1,11 +1,11 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="EventSystem.Account.Login" Async="true" %>
 
-<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
+<%--<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>--%>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+    <h2 class="alert alert-info col-md-8 col-md-offset-2 modal-content"><%: Title %>.</h2>
 
-    <div class="row">
+    <div class="row col-md-8 col-md-offset-2 modal-content">
         <div class="col-md-8">
             <section id="loginForm">
                 <div class="form-horizontal">
@@ -56,10 +56,10 @@
             </section>
         </div>
 
-        <div class="col-md-4">
+        <%--<div class="col-md-4">
             <section id="socialLoginForm">
                 <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
             </section>
-        </div>
+        </div>--%>
     </div>
 </asp:Content>

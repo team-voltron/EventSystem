@@ -6,11 +6,10 @@
       <siteMapNode url="~/Events/Create" title="Create Events" description="Create event page" />
     </siteMapNode>
     <siteMapNode url="~/Categories" title="Categories"  description="Categories page" />
-    <siteMapNode title="Admin panel" description="Admin panel">
+    <siteMapNode url="~/AdminPanel" title="Admin panel" description="Admin panel">
       <siteMapNode url="~/Admin/EditCategories" title="Edit Categories" description="Edit categories panel" />
       <siteMapNode url="~/Admin/EditUsers" title="Edit Users" description="Edit users panel" />
       <siteMapNode url="~/Admin/EditEvents" title="Edit Events" description="Edit events panel" />
-
     </siteMapNode>
   </siteMapNode>
 </siteMap>
