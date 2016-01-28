@@ -13,15 +13,6 @@ namespace EventSystem {
     public partial class ControlsTestingPage {
         
         /// <summary>
-        /// Spinner control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UserControl Spinner;
-        
-        /// <summary>
         /// Sanitizer control.
         /// </summary>
         /// <remarks>
@@ -29,14 +20,5 @@ namespace EventSystem {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::EventSystem.Controls.MindYourLanguage Sanitizer;
-        
-        /// <summary>
-        /// LikeButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::EventSystem.Controls.LikeButton LikeButton;
     }
 }
