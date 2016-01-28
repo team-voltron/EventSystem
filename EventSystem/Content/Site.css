@@ -183,6 +183,7 @@ input[type="select"] {
 
 .edit-btn{
     margin-top:20px;
+    display: block;
 }
 
 .main-stats{
