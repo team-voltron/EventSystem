@@ -67,6 +67,48 @@ namespace EventSystem.Migrations
                     userManager.SetLockoutEnabled(newUser.Id, true);
                     userManager.AddToRole(newUser.Id, "user");
                 }
+
+                var userGosho = userManager.FindByName("gosho");
+                if (userGosho == null)
+                {
+                    var newUser = new AppUser()
+                    {
+                        UserName = "gosho",
+                        Email = "gosho@test.com"
+                    };
+
+                    userManager.Create(newUser, "123456");
+                    userManager.SetLockoutEnabled(newUser.Id, true);
+                    userManager.AddToRole(newUser.Id, "user");
+                }
+
+                var userPesho = userManager.FindByName("pesho");
+                if (userPesho == null)
+                {
+                    var newUser = new AppUser()
+                    {
+                        UserName = "pesho",
+                        Email = "pesho@test.com"
+                    };
+
+                    userManager.Create(newUser, "123456");
+                    userManager.SetLockoutEnabled(newUser.Id, true);
+                    userManager.AddToRole(newUser.Id, "user");
+                }
+
+                var userStamat = userManager.FindByName("Stamat");
+                if (userStamat == null)
+                {
+                    var newUser = new AppUser()
+                    {
+                        UserName = "Stamat",
+                        Email = "stamat@test.com"
+                    };
+
+                    userManager.Create(newUser, "123456");
+                    userManager.SetLockoutEnabled(newUser.Id, true);
+                    userManager.AddToRole(newUser.Id, "user");
+                }
             }
 
             if (!context.Categories.Any())
@@ -76,6 +118,7 @@ namespace EventSystem.Migrations
                 context.Events.AddOrUpdate(seedData.Events.ToArray());
                 context.Categories.AddOrUpdate(seedData.Categories.ToArray());
                 context.Comments.AddOrUpdate(seedData.Comments.ToArray());
+                context.Likes.AddOrUpdate(seedData.Likes.ToArray());
                 context.SaveChanges();
             }
         }

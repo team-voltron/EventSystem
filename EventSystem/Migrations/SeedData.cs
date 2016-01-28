@@ -17,6 +17,8 @@
 
         private List<Comment> comments;
 
+        private List<Like> likes;
+
         public SeedData(AppUser admin)
         {
             this.Categories = new List<Category>();
@@ -140,52 +142,72 @@
             this.Comments = new List<Comment>();
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[0],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
             });
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[0],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
             });
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[0],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
             });
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[1],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
             });
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[1],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
             });
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[1],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
             });
             this.Comments.Add(new Comment()
             {
-                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 5)),
+                DateCreated = DateTime.Now.AddDays(Rand.Next(-5, 0)),
                 Event = this.Events[2],
                 Content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                 Author = admin
+            });
+
+            this.Likes = new List<Like>();
+            this.Likes.Add(new Like()
+            {
+                Event = this.Events[3],
+                Value = 100,
+                User = admin
+            });
+            this.Likes.Add(new Like()
+            {
+                Event = this.Events[2],
+                Value = 420,
+                User = admin
+            });
+            this.Likes.Add(new Like()
+            {
+                Event = this.Events[1],
+                Value = 63,
+                User = admin
             });
         }
 
@@ -238,6 +260,19 @@
             set
             {
                 this.comments = value;
+            }
+        }
+
+        public List<Like> Likes
+        {
+            get
+            {
+                return this.likes;
+            }
+
+            set
+            {
+                this.likes = value;
             }
         }
     }
