@@ -184,6 +184,7 @@
     <Content Include="Controls\StatsControl.ascx" />
     <Content Include="Errors\404.aspx" />
     <Content Include="Events\All.aspx" />
+    <Content Include="Events\ByCategory.aspx" />
     <Content Include="Events\Create.aspx" />
     <Content Include="Events\Details.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -210,6 +211,7 @@
     <Content Include="Public\Images\white_carbon_preview.gif" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\drag-arrange.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -449,6 +451,13 @@
     </Compile>
     <Compile Include="Events\All.aspx.designer.cs">
       <DependentUpon>All.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Events\ByCategory.aspx.cs">
+      <DependentUpon>ByCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Events\ByCategory.aspx.designer.cs">
+      <DependentUpon>ByCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Events\Create.aspx.cs">
       <DependentUpon>Create.aspx</DependentUpon>

@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 draggable-element">
         <div class="panel panel-default  modal-content">
             <div class="panel-heading">
                 <h3 class="text-center">Users
@@ -42,10 +42,13 @@
                 <ItemTemplate>
                     <tr>
                         <td>
-                            <asp:Label
+                            <%--<asp:Label
                                 runat="server" ID="EventCount"
-                                Text="<%# Item.Name%>" />
-                            <%--<asp:HyperLink NavigateUrl='<%# string.Format("~/{0}", Item.UserName) %>' runat="server" Text='<%# Item.UserName %>' />--%>
+                                Text="<%# Item.Name%>" />--%>
+                            <asp:HyperLink
+                                NavigateUrl='<%# string.Format("~/Events/ByCategory.aspx?id={0}", Item.Id) %>'
+                                runat="server"
+                                Text='<%# Item.Name  %>' />
                         </td>
                         <td class="text-right">
                             <asp:Label
@@ -64,8 +67,8 @@
         </div>
     </div>
 
-    <div class="col-md-6">
-        <div class="panel panel-default  modal-content">
+    <div class="col-md-6 draggable-element">
+        <div class="panel panel-default modal-content">
             <div class="panel-heading">
                 <h3 class="text-center">Events
                 </h3>
@@ -117,4 +120,5 @@
             </asp:ListView>
         </div>
     </div>
+    
 </asp:Content>

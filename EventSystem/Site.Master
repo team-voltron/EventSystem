@@ -40,7 +40,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar navbar-default navbar-fixed-top ">
             <div class="header-container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -111,5 +111,10 @@
             </div>
         </footer>
     </form>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="Scripts/drag-arrange.js"></script>
+    <script>
+        $('.draggable-element').arrangeable();
+    </script>
 </body>
 </html>

@@ -25,7 +25,8 @@
             <div class="col-md-4">
                 <div class="panel-heading">
                     <div class="panel panel-primary">
-                        <h2><%#: Item.Name %></h2>
+                        <%--<h2><%#: Item.Name %></h2>--%>
+                        <asp:HyperLink NavigateUrl='<%# string.Format("~/Events/ByCategory.aspx?id={0}", Item.Id) %>' runat="server" Text='<%# string.Format(@"{0}</br>", Item.Name) %>' />
                     </div>
 
                     <div class="panel-body">

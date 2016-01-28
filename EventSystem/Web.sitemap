@@ -4,6 +4,8 @@
     <siteMapNode url="~/Events/All" title="Events" description="Events">
       <siteMapNode url="~/Events/Details" title="Event Details" description="Event details page" />
       <siteMapNode url="~/Events/Create" title="Create Events" description="Create event page" />
+      <siteMapNode url="~/Events/ByCategory" title="By Category" description="List events by category" />
+
     </siteMapNode>
     <siteMapNode url="~/Categories" title="Categories"  description="Categories page" />
     <siteMapNode url="~/AdminPanel" title="Admin panel" description="Admin panel">
