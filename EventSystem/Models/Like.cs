@@ -14,7 +14,7 @@
 
         [Key]
         [Column(Order = 1)]
-        public int ArticleID
+        public int EventId
         {
             get; set;
         }
