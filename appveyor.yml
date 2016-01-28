@@ -8,4 +8,4 @@ build:
   project: EventsSystem.sln
   verbosity: minimal
 cache:
-  - packages -> **\packages.config
+  - packages -> packages.config
