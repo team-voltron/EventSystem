@@ -121,8 +121,8 @@
         protected void LikeControl_Like(object sender, LikeEventArgs e)
         {
             string userID = this.User.Identity.GetUserId();
-            Event article = this.dbContext.Events.Find(e.DataID);
-            Like like = article.Likes.FirstOrDefault(l => l.UserID == userID);
+            Event currentEvent = this.dbContext.Events.Find(e.DataID);
+            Like like = currentEvent.Likes.FirstOrDefault(l => l.UserID == userID);
             if (like == null)
             {
                 like = new Like()
@@ -137,7 +137,7 @@
             this.dbContext.SaveChanges();
 
             var control = sender as LikeControl;
-            control.Value = article.Likes.Sum(l => l.Value);
+            control.Value = currentEvent.Likes.Sum(l => l.Value);
             control.CurrentUserVote = e.LikeValue;
         }
     }
