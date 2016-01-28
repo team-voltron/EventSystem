@@ -6,12 +6,23 @@
     Src="~/Controls/LikeControl.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+
+    <h3 class="text-center alert alert-info col-md-8 col-md-offset-2 modal-content container"><%: Title %></h3>
     <asp:FormView CssClass="col-md-12" runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
         <ItemTemplate>
-            <div class="row">
-                <div class="col-md-8">
+            <div class="container col-md-8 col-md-offset-2 modal-content">
+                <div class="col-md-1">
+                    <uc:LikeControl
+                        runat="server"
+                        ID="LikeControl"
+                        Value="<%# GetLikes(Item) %>"
+                        CurrentUserVote="<%# GetCurrentUserVote(Item) %>"
+                        DataID="<%# Item.Id %>"
+                        OnLike="LikeControl_Like" />
+                </div>
+                <div class="col-md-7">
                     <header>
-                        <h1><%: Title %></h1>
+
                         <h2><%#: Item.Name %></h2>
                         <p><i>by <%#: Item.Author.UserName %></i></p>
                     </header>
@@ -25,18 +36,11 @@
                     <div class="col-md-10 col-md-offset-1">
                         <img src="<%# Item.ImageLocation %>" width="100%" />
                     </div>
-                    <div class="col-md-10 col-md-offset-1">
-                        <uc:likecontrol
-                            runat="server"
-                            id="LikeControl"
-                            value="<%# GetLikes(Item) %>"
-                            currentuservote="<%# GetCurrentUserVote(Item) %>"
-                            dataid="<%# Item.Id %>"
-                            onlike="LikeControl_Like" />
-                    </div>
+
                 </div>
+                
             </div>
-            <div class="row">
+            <div class="container col-md-8 col-md-offset-2 modal-content">
                 <div class="col-md-6">
                     <asp:ListView runat="server"
                         ID="EventComments"
@@ -56,6 +60,7 @@
                         </ItemTemplate>
                         <EmptyItemTemplate>
                             There are no comments for this event.
+                       
                         </EmptyItemTemplate>
                         <InsertItemTemplate>
                             <div class="text-center">

@@ -1,31 +1,32 @@
 ﻿<%@ Page Title="Category" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ByCategory.aspx.cs" Inherits="EventSystem.Events.ByCategory" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="col-md-12">
-        <h1>
+    <div class="col-md-12 container">
+        <h3 class="text-center alert alert-info col-md-8 col-md-offset-2 modal-content container">
             <%: Title %> :
+           
             <asp:Literal runat="server" ID="LiteralSearchQuery" Mode="Encode"></asp:Literal>
-        </h1>
+        </h3>
     </div>
 
-    <asp:Repeater runat="server" ID="Repeater" ItemType="EventSystem.Models.Event" SelectMethod="Repeater_GetData">
-        <HeaderTemplate>
-          
-            <ul>
-        </HeaderTemplate>
-        <ItemTemplate>
-            <li>
-                <asp:HyperLink NavigateUrl='<%# string.Format("~/Events/Details.aspx?id={0}", Item.Id) %>' runat="server" ID="HyperLinkEvent" Text="<%# Item.Name %>"/>
-            </li>
-        </ItemTemplate>
-        <FooterTemplate>
-            </ul>
-        </FooterTemplate>
-    </asp:Repeater>
+    <div class="col-md-8 col-md-offset-2">
+        <asp:Repeater runat="server" ID="Repeater" ItemType="EventSystem.Models.Event" SelectMethod="Repeater_GetData">
+            <HeaderTemplate>
 
-    <div class="back-link">
-        <a href="/">Back to events</a>
+                <ul class="list-group container">
+            </HeaderTemplate>
+            <ItemTemplate>
+                <li class="list-group-item">
+                    <asp:HyperLink NavigateUrl='<%# string.Format("~/Events/Details.aspx?id={0}", Item.Id) %>' runat="server" ID="HyperLinkEvent" Text="<%# Item.Name %>" />
+                </li>
+            </ItemTemplate>
+            <FooterTemplate>
+                </ul>
+       
+            </FooterTemplate>
+        </asp:Repeater>
     </div>
-
+    <a class=" btn btn-primary col-md-8 col-md-offset-2" href="/Events/All">Back to events</a>
 </asp:Content>
 

@@ -120,5 +120,9 @@
             </asp:ListView>
         </div>
     </div>
-    
+      <script src="//code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/drag-arrange.js" type="text/javascript"></script>
+     <script>
+        $('.draggable-element').arrangeable();
+    </script>
 </asp:Content>

@@ -28,7 +28,7 @@ namespace EventSystem.Events
         {
             var id = int.Parse(query);
 
-            this.LiteralSearchQuery.Text = string.Format("“{0}”:", this.dbContext.Categories.FirstOrDefault(c=>c.Id==id).Name);
+            this.LiteralSearchQuery.Text = string.Format("“{0}”", this.dbContext.Categories.FirstOrDefault(c=>c.Id==id).Name);
             var events = this.dbContext.Events.Where(e => e.Category.Id == id);
 
             return events;
