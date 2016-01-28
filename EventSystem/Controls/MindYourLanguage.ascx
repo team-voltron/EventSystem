@@ -11,6 +11,7 @@
         }
 
         this.textToSinitize.Text = text;
+        this.literalResult.Text = text;
     }
 </script>
 
@@ -22,11 +23,16 @@
             </label>
         </div>
         <div class="col-md-9">
-            <asp:TextBox
-                CssClass="form-control"
-                ID="textToSinitize"
-                TextMode="MultiLine"
-                runat="server" />
+            <div class="row">
+                <asp:Literal ID="literalResult" runat="server" />
+            </div>
+            <div class="row">
+                <asp:TextBox
+                    CssClass="form-control"
+                    ID="textToSinitize"
+                    TextMode="MultiLine"
+                    runat="server" />
+            </div>
         </div>
     </div>
     <div class="col-md-3">
