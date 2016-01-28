@@ -24,6 +24,8 @@ namespace EventSystem.Models
 
         public IDbSet<Category> Categories { get; set; }
 
+        public IDbSet<Like> Likes { get; set; }
+
         public static EventSystemDbContext Create()
         {
             return new EventSystemDbContext();
