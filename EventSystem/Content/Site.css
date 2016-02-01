@@ -226,3 +226,15 @@ input[readonly] {
   text-decoration: none,line-through;
   color: white;
 }
+
+.content-details{
+    padding: 30px;
+}
+
+.content-details h2{
+    margin-top: 0px;
+}
+
+.like-value{
+    font-weight:bold;
+}

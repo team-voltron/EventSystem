@@ -31,15 +31,6 @@ namespace EventSystem.Controls {
         protected global::System.Web.UI.WebControls.LinkButton ButtonLike;
         
         /// <summary>
-        /// LabelValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelValue;
-        
-        /// <summary>
         /// ButtonDislike control.
         /// </summary>
         /// <remarks>
@@ -47,5 +38,14 @@ namespace EventSystem.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton ButtonDislike;
+        
+        /// <summary>
+        /// LabelValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelValue;
     }
 }

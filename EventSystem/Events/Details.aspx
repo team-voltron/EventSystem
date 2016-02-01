@@ -10,7 +10,7 @@
     <h3 class="text-center alert alert-info col-md-8 col-md-offset-2 modal-content container"><%: Title %></h3>
     <asp:FormView CssClass="col-md-12" runat="server" ID="FormVideEventDetails" ItemType="EventSystem.Models.Event" SelectMethod="FormVideEventDetails_GetItem">
         <ItemTemplate>
-            <div class="container col-md-8 col-md-offset-2 modal-content">
+            <div class="container col-md-8 col-md-offset-2 modal-content content-details">
                 <div class="col-md-1">
                     <uc:LikeControl
                         runat="server"
@@ -20,12 +20,10 @@
                         DataID="<%# Item.Id %>"
                         OnLike="LikeControl_Like" />
                 </div>
-                <div class="col-md-7">
-                    <header>
-
-                        <h2><%#: Item.Name %></h2>
+                <div class="col-md-6 col-md-offset-1">
+                        <h2 ><%#: Item.Name %></h2>
                         <p><i>by <%#: Item.Author.UserName %></i></p>
-                    </header>
+                    
                     <div class="row-fluid">
                         <div class="span12 book-description">
                             <p><%#: Item.Description %></p>
@@ -38,9 +36,9 @@
                     </div>
 
                 </div>
-                
+
             </div>
-            <div class="container col-md-8 col-md-offset-2 modal-content">
+            <div class="container col-md-8 col-md-offset-2 modal-content content-details">
                 <div class="col-md-6">
                     <asp:ListView runat="server"
                         ID="EventComments"
@@ -105,7 +103,5 @@
         </ItemTemplate>
     </asp:FormView>
 
-    <div class="back-link">
-        <a href="/">Back to events</a>
-    </div>
+    <a class=" btn btn-primary col-md-8 col-md-offset-2" href="/Events/All">Back to events</a>
 </asp:Content>

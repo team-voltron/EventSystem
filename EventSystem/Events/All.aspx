@@ -8,7 +8,7 @@
             </div>
         </div>
     <div class="row">
-        <h1 class="text-center alert alert-info col-md-8 col-md-offset-2 modal-content container"><%: this.Title %></h1>
+        <h3 class="text-center alert alert-info col-md-8 col-md-offset-2 modal-content container"><%: this.Title %></h3>
         
     </div>
 
